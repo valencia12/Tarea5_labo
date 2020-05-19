@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista estudiantes</title>
+</head>
+<body style="background-color: #F75A2B;">
+<div style="font-family: Arial, Helvetica, sans-serif; margin-left: 12%; color: white;">
+    <h1>Lista Estudiantes</h1>
+    <table>
+
+
+
+        <thead>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Carne</th>
+        <th>Carrera</th>
+        </thead>
+
+
+
+
+
+
+
+        <th:block th:each="estudiante, row: ${estudiantes}">
+            <tr>
+                <th th:text="${estudiante.nombre}"></th>
+                <th th:text="${estudiante.apellido}"></th>
+                <th th:text="${estudiante.carne}"></th>
+                <th th:text="${estudiante.carrera}"></th>
+            </tr>
+        </th:block>
+    </table>
+    <br>
+</div>
+</body>
+</html>
